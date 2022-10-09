@@ -36,12 +36,7 @@
             "type": "nominal"
         },
     
-        // "y":{
-        //     "field": "price",
-        //     "type": "quantitative",
-        //     "axis": {"tickCount": 6},
-        //     "scale": {"type": "log", "domain": [100, 15000]}
-        // }
+
         "y": {
             "aggregate": "mean", "field": "neighbourhood_price"
             }
