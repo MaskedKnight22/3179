@@ -1,0 +1,46 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "title": "The Density of Air-BnB's across Melbourne",
+    "projection": {"type": "equirectangular"},
+    "layer": [
+    {
+    "data": {
+    "url":
+    "https://raw.githubusercontent.com/MaskedKnight22/3179/main/neighbourhoods%20(2).json",
+    "format": {"type": "topojson", "feature":
+    "neighbourhoods"}
+    },
+    
+    "mark": {"type": "geoshape", "fill": "lightgray", "stroke":
+    "white"}
+    },
+    {    
+    "data": {
+    "url":
+    "https://raw.githubusercontent.com/MaskedKnight22/3179/main/cleansed_listings_dec18.csv"
+    },
+      "selection": {
+        "city_highlight": {
+        "type": "multi",
+        "fields": ["city"],
+        "bind": "legend"
+    }
+  },
+    "mark": {"type": "circle"},
+    "encoding": {
+    "color": {"field": "city"},
+    "longitude": {"field": "longitude", "type":
+    "quantitative"},
+    "latitude": {"field": "latitude", "type":
+    "quantitative"},
+    "tooltip": {"field": "city"},
+    "opacity": {
+      "condition": {"selection": "city_highlight", "value": 1},
+      "value": 0
+}
+    }
+    }
+    ]
+    }
