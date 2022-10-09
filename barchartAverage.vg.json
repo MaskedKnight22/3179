@@ -1,0 +1,51 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 800,
+    "height": 500,
+    "title": "My Practice Map", 
+    "data": {
+    "url":
+    "https://raw.githubusercontent.com/MaskedKnight22/3179/main/cleansed_listings_dec18.csv"
+    },
+    
+    "params": [{
+      "name": "Price_Above",
+      "value": 50,
+      "bind": {
+      "input": "range",
+      "min": 50,
+      "max": 260,
+      "step": 10,
+      "name": "Minimum Population: "
+      }
+    }],
+
+    "transform": [
+      {
+        "aggregate": [
+        {"op": "mean", "field": "price", "as": "neighbourhood_price"}
+        ],
+        "groupby": ["city"]
+    },
+    {"filter": "datum.neighbourhood_price > Price_Above"}],
+
+    "mark": "bar",
+    "encoding": {
+        "x": {
+            "field": "city",
+            "type": "nominal"
+        },
+    
+        // "y":{
+        //     "field": "price",
+        //     "type": "quantitative",
+        //     "axis": {"tickCount": 6},
+        //     "scale": {"type": "log", "domain": [100, 15000]}
+        // }
+        "y": {
+            "aggregate": "mean", "field": "neighbourhood_price"
+            }
+    
+    }
+    }
+    
