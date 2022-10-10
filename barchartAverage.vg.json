@@ -16,7 +16,7 @@
       "min": 50,
       "max": 260,
       "step": 10,
-      "name": "Minimum Population: "
+      "name": "Minimum Price: "
       }
     }],
 
@@ -38,7 +38,8 @@
     
 
         "y": {
-            "aggregate": "mean", "field": "neighbourhood_price"
+            "aggregate": "mean", "field": "neighbourhood_price",
+            "title": "Average Neighbourhood Price"
             }
     
     }
