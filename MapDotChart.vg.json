@@ -1,9 +1,11 @@
+
+
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 600,
     "height": 400,
-    "title": "The Density of Air-BnB's across Melbourne",
     "projection": {"type": "equirectangular"},
+    "background": "#efd9da",
     "layer": [
     {
     "data": {
@@ -13,7 +15,7 @@
     "neighbourhoods"}
     },
     
-    "mark": {"type": "geoshape", "fill": "lightgray", "stroke":
+    "mark": {"type": "geoshape", "fill": "#efb6b9", "stroke":
     "white"}
     },
     {    
