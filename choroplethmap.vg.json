@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 600,
+    "height": 400,
+    "projection": {"type": "equirectangular"},
+    "background": "#efd9da",
+    "data": {
+      "url": "https://raw.githubusercontent.com/MaskedKnight22/3179/main/neighbourhoods%20(2).json",
+      "format": {"type": "topojson", "feature": "neighbourhoods"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.neighbourhood",
+        "from": {
+          "data": {
+            
+            "url": "https://raw.githubusercontent.com/MaskedKnight22/3179/main/average_price_per_city.csv"
+          },
+          "key": "city",
+          "fields": ["average price"]
+        }
+      }
+    ],
+  
+    "mark": {"type": "geoshape"},
+    "encoding": {
+      "color": { 
+      "field": "average price", "type": "quantitative",
+      "scale": {"scheme": "redpurple"}, "legend": {"title": "Price ($)"}},
+      "tooltip": [
+        {
+          "field": "properties.neighbourhood",
+          "type": "nominal",
+          "title": "Neighbourhood"
+        },
+        {"field": "average price", "type": "quantitative","format": ".0f", "title": "Average Price"}
+      ]
+    }
+  }
