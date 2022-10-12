@@ -31,14 +31,14 @@
 
     "mark": {"type": "bar", "fill": "#e4acaf"},
     "encoding": {
-        "x": {
+        "y": {
             "field": "city",
             "type": "nominal",
             "title": "Melbourne Cities"
         },
     
 
-        "y": {
+        "x": {
             "aggregate": "mean", "field": "neighbourhood_price",
             "title": "Average Neighbourhood Price ($)"
             }
