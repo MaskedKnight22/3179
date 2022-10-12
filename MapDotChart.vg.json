@@ -1,8 +1,6 @@
-
-
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 400,
+    "width": 500,
     "height": 400,
     "projection": {"type": "equirectangular"},
     "background": "#efd9da",
@@ -28,15 +26,14 @@
         "type": "multi",
         "fields": ["city"],
         "bind": "legend"
+        
     }
   },
     "mark": {"type": "circle"},
     "encoding": {
-    "color": {"field": "city"},
-    "longitude": {"field": "longitude", "type":
-    "quantitative"},
-    "latitude": {"field": "latitude", "type":
-    "quantitative"},
+    "color": {"field": "city", "legend": {"title":"Melbourne Cities"}},
+    "longitude": {"field": "longitude", "type": "quantitative"},
+    "latitude": {"field": "latitude", "type": "quantitative"},
     "tooltip": {"field": "city"},
     "opacity": {
       "condition": {"selection": "city_highlight", "value": 1},
