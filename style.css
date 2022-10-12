@@ -1,0 +1,45 @@
+html, body {
+    background-color: #efd9da;
+    margin-left: 20px;
+    margin-right: 20px;
+    }
+
+
+h1 {
+    font-size: 50px;
+    color: #df686c;
+    text-align: center;
+    font-family: 'Open Sans';
+}
+
+h2 {
+    font-size: 25px;
+    color: #df686c;
+    text-align: left;
+    font-family: 'Open Sans';
+    padding-top: 20px;
+}
+
+.pure-u-1-2{
+    margin-bottom: 20px;
+}
+
+p {
+    color: rgb(121, 81, 81);
+    font-size: larger;
+    text-align: center;
+    font-weight: lighter;
+}
+
+#left-alligned{
+    color: rgb(121, 81, 81);
+    font-size: larger;
+    text-align: left;
+    font-weight: lighter;
+}
+
+a:link {
+    color: rgb(121, 81, 81);
+    background-color: transparent;
+    text-decoration: none;
+  }

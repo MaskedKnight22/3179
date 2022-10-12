@@ -1,25 +1,95 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>Embedding Vega-Lite</title>
+<head>
     <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
-  </head>
-  <body>
-    <h1>Week 10 Homework</h1>
-    <h2>Accomodations Of Different Melbourne Cities</h2>
-    <div id="visual2"></div>
-    <h2>A Look Over Melbourne</h2>
-    <div id="visual1"></div>
-    
-    <script type="text/javascript">
-      var vis1 = "https://raw.githubusercontent.com/MaskedKnight22/3179/main/MapDotChart.vg.json";
-      vegaEmbed('#visual1', vis1);
-      
-      var vis2 = "https://raw.githubusercontent.com/MaskedKnight22/3179/main/barchartAverage.vg.json";
-      vegaEmbed('#visual2', vis2);
-    </script>
-  </body>
-</html>
 
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    
+    
+    <title>The Airbnb's Of Melbourne</title>
+
+
+</head>
+<body>
+
+
+    <div class = "pure-g">
+
+        <div class = "pure-u-1">
+            <h1>The Airbnb's Of Melbourne</h1>
+            <p>
+                Over the years Melbourne has consistently been ranked as the world's most liveable city. 
+                This is no coincidence. Being named the sports capital of Australia, hosting the 
+                AFL Grand Final, Australian Open, The Boxing Day Test, and upcoming  T20I World-Cup final. 
+                It is the dream location for every sports lover. Not to mention the multiple scenic beaches 
+                around Melbounrne, the modern infastrucutre and easy access public transport around 
+                Melbounrne which make it the ideal location for tourists of all backgrounds. Therefore, 
+                the demand for Airbnb's has been increasing to accomodate for tourists who do not always 
+                want to stay in hotels.
+                <br></br>
+                The following visualisation provides an overview of the information about Melbourne Airbnb's, 
+                modelled from data obtained at <b><a href="https://www.kaggle.com/datasets/tylerx/melbourne-airbnb-open-data?select=cleansed_listings_dec18.csv">Kaggle</a></b>.
+                The visualisations explore the density, price and average size of accomodations across 
+                Melbourne, to enable locals and tourists to make well informed decisions while booking 
+                an AirBnB.
+            </p>
+        </div>
+
+
+
+        <div class = "pure-u-1-2">
+                <h2>The Density of Airbnb's Across Melbourne</h2>
+                <p id = "left-alligned">
+                    The dot density map displays the location of Airbnb's around Melbourne. The different
+                    colours signify the thirty different cities around Melbourne. <i>By hovering over 
+                    any single data point (Airbnb residence) the city of each Airbnb can be identified. 
+                    Furthermore, the legend can be used as a filter. </i>
+                    <br><br>
+                    The map signifies that the central Melbounre area is Airbnb dense, and as we withdraw
+                    from centeral Melbourne we observe that the density of Airbnb's also decreases. However,
+                    this trend is only apprent for cities to the East of Centeral Melbourne. The coastline 
+                    throughout Melbourne is still very dense and a highly sought out Airbnb destination.
+
+                </p>
+        </div>
+        <div class = "pure-u-1-2" id="DensityVisual"></div>
+        <div class = "pure-u-1-2" id="PriceBarVisual"></div>
+        <div class = "pure-u-1-2" id="ChoroplethVisual"><br></div>
+
+        <div class = "pure-u-1">
+            <h2>The Airbnb's Of Melbourne</h2>
+            <p>
+                Both visualisations provide an overview of the average prices for each city within Melbourne.
+                Where the bar chart allows for filtering and clear identification of cities, the choropleth 
+                map enables us to make an observation about the average prices compared to the land area and 
+                the density of air-bnb's from "The Density of Airbnb's Across Melbourne" visualisation.
+                <br><br>
+                - The difference between density and the price.<br><br>
+                - Land Area vs Price<br><br>
+                - Perhaps create a visual of distance from CBD.<br><br>
+                - Also creating chropleth map on average number of rooms in each city.<br><br>
+        
+            </p>
+        </div>
+
+
+    
+    </div>
+
+    <script type="text/javascript">
+        var densityVisual = "https://raw.githubusercontent.com/MaskedKnight22/3179/main/MapDotChart.vg.json";
+        vegaEmbed('#DensityVisual', densityVisual);
+
+        var priceBarVisual = "https://raw.githubusercontent.com/MaskedKnight22/3179/main/barchartAverage.vg.json";
+        vegaEmbed('#PriceBarVisual', priceBarVisual);
+
+        var choroplethVisual = "https://raw.githubusercontent.com/MaskedKnight22/3179/main/choroplethmap.vg.json";
+        vegaEmbed('#ChoroplethVisual', choroplethVisual);
+    </script> 
+
+</body>
+</html>
 
