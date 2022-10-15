@@ -9,32 +9,34 @@
     },
     
     "params": [{
-      "name": "Price_Above",
-      "value": 50,
+      "name": "Size_Above",
+      "value": 0,
       "bind": {
       "input": "range",
-      "min": 50,
-      "max": 260,
-      "step": 10,
-      "name": "Minimum Price: "
+      "min": 0,
+      "max": 4,
+      "step": 1,
+      "name": "Minimum Accomodates:"
       }
     }],
 
     "transform": [
       {
         "aggregate": [
-        {"op": "mean", "field": "price", "as": "neighbourhood_price"}
+        {"op": "mean", "field": "price", "as": "neighbourhood_price"},
+        {"op": "median", "field": "accommodates", "as": "median_accommodate"}
         ],
         "groupby": ["city"]
     },
-    {"filter": "datum.neighbourhood_price > Price_Above"}],
+    {"filter": "datum.median_accommodate > Size_Above"}],
 
     "mark": {"type": "bar", "fill": "#e4acaf"},
     "encoding": {
         "y": {
             "field": "city",
             "type": "nominal",
-            "title": "Melbourne Cities"
+            "title": "Melbourne Cities",
+            "sort":"-x"
         },
     
 
