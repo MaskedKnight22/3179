@@ -31,7 +31,7 @@
         {
           "field": "properties.neighbourhood",
           "type": "nominal",
-          "title": "Neighbourhood"
+          "title": "City:"
         },
         {"field": "average price", "type": "quantitative","format": ".0f", "title": "Average Price"}
       ]
