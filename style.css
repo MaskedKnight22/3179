@@ -1,0 +1,73 @@
+body {
+    background-color: #efd9da;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: #df686c;
+    border-style: dotted;
+    }
+
+html{
+    background-color: #dd9194;
+}
+
+
+h1 {
+    font-size: 50px;
+    color: #df686c;
+    text-align: center;
+    font-family: 'Open Sans';
+}
+
+h2 {
+    font-size: 25px;
+    color: #df686c;
+    text-align: left;
+    font-family: 'Open Sans';
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.pure-u-1-2{
+    margin-bottom: -50px;
+}
+
+p {
+    color: rgb(121, 81, 81);
+    font-size: larger;
+    text-align: center;
+    font-weight: lighter;
+    padding-bottom: 40px;
+    font-size: 21px;
+    padding-left: 30px;
+    padding-right: 30px;
+    
+    
+}
+
+#left-alligned{
+    color: rgb(121, 81, 81);
+    font-size: larger;
+    text-align: left;
+    font-weight: lighter;
+    font-size: 21px;
+}
+
+a:link {
+    color: rgb(121, 81, 81);
+    background-color: transparent;
+    text-decoration: none;
+  }
+
+#PriceBarVisual {
+    margin-bottom: 50px;
+}
+
+.red{
+    color: rgb(245, 92, 92)
+}
+
+.green{
+    color: #90c070
+}
