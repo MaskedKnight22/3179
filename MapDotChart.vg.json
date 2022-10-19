@@ -22,24 +22,13 @@
     "url":
     "https://raw.githubusercontent.com/MaskedKnight22/3179/main/cleansed_listings_dec18.csv"
     },
-      "selection": {
-        "city_highlight": {
-        "type": "multi",
-        "fields": ["city"],
-        "bind": "legend"
-        
-    }
-  },
+    
     "mark": {"type": "circle", "color": "#da7075"},
     "encoding": {
     
     "longitude": {"field": "longitude", "type": "quantitative"},
     "latitude": {"field": "latitude", "type": "quantitative"},
-    "tooltip": {"field": "city"},
-    "opacity": {
-      "condition": {"selection": "city_highlight", "value": 1},
-      "value": 0
-}
+    "tooltip": {"field": "city"}
     }
     }
     ]
